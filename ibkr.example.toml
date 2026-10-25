@@ -1,0 +1,22 @@
+# Copy to ibkr.local.toml. Never commit a real account ID or private runtime files.
+host = "127.0.0.1"
+port = 7497                 # TWS paper 7497; Gateway paper 4002 (confirm your settings)
+client_id = 27             # Reserve a unique ID for this bot; do not share it
+account = ""               # Set IBKR_ACCOUNT locally, or enter your DU... paper account here
+mode = "paper"
+allow_live = false
+capital_limit = 10000.0    # Maximum USD NAV allocated to this strategy, not full account by default
+cash_buffer_pct = 0.01    # Keep 1% of strategy capital as uninvested fee/rounding buffer
+max_order_usd = 10000.0
+max_spread_bps = 40.0
+limit_offset_bps = 10.0    # Buy limit = ask + 10 bps; sell limit = bid - 10 bps, tick-rounded
+min_trade_usd = 10.0
+fee_buffer_usd = 2.0      # Per-order affordability allowance; actual commissions may differ
+quote_timeout = 15.0
+quote_max_age = 15.0
+order_timeout = 45.0
+cancel_timeout = 15.0
+start_minutes_before_close = 25
+end_minutes_before_close = 5
+state_dir = "runtime/ibkr"
+prices_csv = ""           # Empty = download; local cache must cover the exact signal month end

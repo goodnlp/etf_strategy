@@ -7,3 +7,9 @@ data/*
 !data/proxy20/
 data/proxy20/*
 !data/proxy20/*.csv
+
+# Private broker configuration, account state, order journals and logs
+ibkr.local.toml
+ibkr.*.local.toml
+runtime/
+.env

@@ -48,3 +48,7 @@ python -m venv --system-site-packages .venv
 VOO←SPY，VXUS←VGTSX，GLDM←GLD；SGOV 成立前主方案使用 BIL，BIL 成立前用 ^IRX 滞后利率近似现金收益。另有 SHV 和纯利率模型两组现金代理对照。原标的成立后切回真实 ETF 日收益。收益和价格序列分别衔接，避免拼接价格跳跃；完整方法、切换日期和局限见报告。
 
 原始下载在 `data/proxy20/`，实验输出在 `results/proxy20/`。含不同市场阶段、现金代理和交易成本敏感性、按年末及最终日取样的五年窗口、70/30 基准、净值回撤图及输入数据哈希。本实验属于代理历史模拟，不是八只 ETF 的二十年实际业绩。
+
+## IBKR 自动执行
+
+新增 [IBKR 配置、模拟盘、调度和故障恢复说明](IBKR.md)。复用当前策略，默认只预览；支持显式开启的模拟盘／实盘限价下单、整股与资金限制、先卖后买、SQLite 订单记录和重复执行保护。独立安装依赖：`pip install -r requirements-live.txt`。示例配置为 `ibkr.example.toml`，实际账户配置和订单记录不纳入 Git。

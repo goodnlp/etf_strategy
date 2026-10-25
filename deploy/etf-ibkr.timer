@@ -1,0 +1,11 @@
+[Unit]
+Description=Check monthly IBKR execution window each minute
+
+[Timer]
+OnCalendar=*-*-* *:*:00
+AccuracySec=1s
+Persistent=false
+Unit=etf-ibkr.service
+
+[Install]
+WantedBy=timers.target

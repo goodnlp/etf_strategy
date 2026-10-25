@@ -1,0 +1,13 @@
+[Unit]
+Description=ETF monthly rotation (IBKR paper trading)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+WorkingDirectory=/workspace/etf_strategy
+EnvironmentFile=-/workspace/etf_strategy/runtime/ibkr.env
+Environment=PYTHONUNBUFFERED=1
+ExecStart=/workspace/etf_strategy/.venv/bin/python -m ibkr_bot run --config /workspace/etf_strategy/ibkr.local.toml --execute
+TimeoutStartSec=900
+UMask=0077

@@ -1,0 +1,3 @@
+-r requirements.txt
+ib_async==2.1.0
+exchange-calendars>=4.13,<5
