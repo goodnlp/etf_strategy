@@ -33,3 +33,18 @@ python -m venv --system-site-packages .venv
 真实行情已下载并完成回测。数据缓存为 `data/prices.csv`，覆盖八只 ETF，含 Adj Close、Close 和分红事件。正式评估区间为 2021-10-25 至 2026-10-23；10 月 25 日为非交易日。结果见 [回测报告](results/REPORT.md)。
 
 可使用 `.venv/bin/python backtest.py --offline --start 2021-10-25 --end 2026-10-25` 复现本地缓存结果。最新下载可能因数据源修订而变化。当前结果只验证了本实例，尚未验证新任务中的快照恢复。
+
+## 二十年代理延长实验
+
+新增 [二十年代理回测报告](results/proxy20/REPORT.md)，评估 2006-10-25 至 2026-10-23，独立于原五年结果。
+
+```bash
+# 使用本地已下载的 14 个行情/利率序列重放
+.venv/bin/python proxy_backtest.py --offline
+# 重新下载并运行
+.venv/bin/python proxy_backtest.py
+```
+
+VOO←SPY，VXUS←VGTSX，GLDM←GLD；SGOV 成立前主方案使用 BIL，BIL 成立前用 ^IRX 滞后利率近似现金收益。另有 SHV 和纯利率模型两组现金代理对照。原标的成立后切回真实 ETF 日收益。收益和价格序列分别衔接，避免拼接价格跳跃；完整方法、切换日期和局限见报告。
+
+原始下载在 `data/proxy20/`，实验输出在 `results/proxy20/`。含不同市场阶段、现金代理和交易成本敏感性、按年末及最终日取样的五年窗口、70/30 基准、净值回撤图及输入数据哈希。本实验属于代理历史模拟，不是八只 ETF 的二十年实际业绩。

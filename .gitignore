@@ -3,3 +3,7 @@ __pycache__/
 .pytest_cache/
 data/*
 !data/prices.csv
+
+!data/proxy20/
+data/proxy20/*
+!data/proxy20/*.csv

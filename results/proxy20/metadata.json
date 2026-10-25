@@ -1,0 +1,151 @@
+{
+  "requested_start": "2006-10-25",
+  "requested_end": "2026-10-25",
+  "actual_start": "2006-10-25",
+  "actual_end": "2026-10-23",
+  "evaluated_at_utc": "2026-10-25 14:21:22.447066+00:00",
+  "cost_bps": 10.0,
+  "description": "Proxy extension; pre-inception history is NOT the named ETF actual return",
+  "rate_model_annual_fee": 0.0009,
+  "variants": [
+    {
+      "cash_proxy": "BIL",
+      "rebalance_count": 240,
+      "proxies": [
+        {
+          "ticker": "VOO",
+          "proxy": "SPY",
+          "actual_from": "2010-09-09"
+        },
+        {
+          "ticker": "VXUS",
+          "proxy": "VGTSX",
+          "actual_from": "2011-01-28"
+        },
+        {
+          "ticker": "GLDM",
+          "proxy": "GLD",
+          "actual_from": "2018-06-26"
+        },
+        {
+          "ticker": "SGOV",
+          "proxy": "BIL",
+          "rate_model_until": "2007-05-30",
+          "actual_from": "2020-06-01"
+        }
+      ]
+    },
+    {
+      "cash_proxy": "SHV",
+      "rebalance_count": 240,
+      "proxies": [
+        {
+          "ticker": "VOO",
+          "proxy": "SPY",
+          "actual_from": "2010-09-09"
+        },
+        {
+          "ticker": "VXUS",
+          "proxy": "VGTSX",
+          "actual_from": "2011-01-28"
+        },
+        {
+          "ticker": "GLDM",
+          "proxy": "GLD",
+          "actual_from": "2018-06-26"
+        },
+        {
+          "ticker": "SGOV",
+          "proxy": "SHV",
+          "rate_model_until": "2007-01-11",
+          "actual_from": "2020-06-01"
+        }
+      ]
+    },
+    {
+      "cash_proxy": "IRX",
+      "rebalance_count": 240,
+      "proxies": [
+        {
+          "ticker": "VOO",
+          "proxy": "SPY",
+          "actual_from": "2010-09-09"
+        },
+        {
+          "ticker": "VXUS",
+          "proxy": "VGTSX",
+          "actual_from": "2011-01-28"
+        },
+        {
+          "ticker": "GLDM",
+          "proxy": "GLD",
+          "actual_from": "2018-06-26"
+        },
+        {
+          "ticker": "SGOV",
+          "proxy": "IRX",
+          "rate_model_until": null,
+          "actual_from": "2020-06-01"
+        }
+      ]
+    }
+  ],
+  "inputs": {
+    "BIL.csv": {
+      "sha256": "7b89283afc661734cb03598c40b73baf4d28ae8399e5c812e598c1aabe1130fc",
+      "file_modified_at_utc": "2026-10-25 14:18:12.457023144+00:00"
+    },
+    "GLD.csv": {
+      "sha256": "c1abda58e301e4262aea810a7427bf4242e47f8156a13f97a601254c93897f90",
+      "file_modified_at_utc": "2026-10-25 14:18:10.969037294+00:00"
+    },
+    "GLDM.csv": {
+      "sha256": "535aa211c2dcf7bc62a74894e733da7476e998751518bff7e2420b1dbecc96cf",
+      "file_modified_at_utc": "2026-10-25 14:18:02.521118164+00:00"
+    },
+    "IEF.csv": {
+      "sha256": "2738b5ed5e96fa52a5f966ca020175d2eb8514d3cea33b6360a1484906bb2db8",
+      "file_modified_at_utc": "2026-10-25 14:18:07.093074560+00:00"
+    },
+    "IRX.csv": {
+      "sha256": "bcd728fe1406cd441cf6e1489497924249e50937ba96a9127d3b285fd851d5cf",
+      "file_modified_at_utc": "2026-10-25 14:18:15.400995016+00:00"
+    },
+    "QQQ.csv": {
+      "sha256": "745dcc3b4707fdfe4e4743cb814792d77fc7c265189a498f70aecc6df5695e45",
+      "file_modified_at_utc": "2026-10-25 14:17:59.165150404+00:00"
+    },
+    "SGOV.csv": {
+      "sha256": "f67c2c5779da034ce6551b8ac2cf8f226b8433213a887c485486d87f06ff4dc8",
+      "file_modified_at_utc": "2026-10-25 14:18:07.385071754+00:00"
+    },
+    "SHV.csv": {
+      "sha256": "acc44f731e42decb2e9c0477ef7b3dc99281378333cdb28f44f95f83bc5c55c1",
+      "file_modified_at_utc": "2026-10-25 14:18:13.957008839+00:00"
+    },
+    "SPY.csv": {
+      "sha256": "7c2b3960ec496233d642b6cb2806489e011f9873d0a951c769ba494ddc4b0591",
+      "file_modified_at_utc": "2026-10-25 14:18:08.929056883+00:00"
+    },
+    "VGTSX.csv": {
+      "sha256": "4a0c193a5d104d0443a2dfca733d4932cc64143c929f07b456ebb14d71ee6cdd",
+      "file_modified_at_utc": "2026-10-25 14:18:10.485042095+00:00"
+    },
+    "VOO.csv": {
+      "sha256": "921cc0f8e8b97944648c0be630123988de5e2f3363d30f252b6681ff7e8e2b4e",
+      "file_modified_at_utc": "2026-10-25 14:17:59.909143209+00:00"
+    },
+    "VTV.csv": {
+      "sha256": "fa7d705b2ff043571b7f89b036d636c72876ff359bcb26fc0620f872e10b64ef",
+      "file_modified_at_utc": "2026-10-25 14:18:00.585136652+00:00"
+    },
+    "VXUS.csv": {
+      "sha256": "a9ac83840f0a74deefb1f130ca9c277fdce0b45c6f916f0d5fc68d432d8ed18c",
+      "file_modified_at_utc": "2026-10-25 14:18:01.165131092+00:00"
+    },
+    "XLE.csv": {
+      "sha256": "932a66be2d0afa8cf6528d6c88c73b850f452c9aa407b9137ad5ea1f538fd47b",
+      "file_modified_at_utc": "2026-10-25 14:18:06.673078537+00:00"
+    }
+  }
+}
